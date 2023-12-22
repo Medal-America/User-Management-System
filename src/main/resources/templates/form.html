@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>User Form</title>
+</head>
+<body>
+<h2>User Form</h2>
+<form method="post" th:action="@{/save}">
+
+    <label>First Name: <input type="text" id="fname" name="fname" /></label><br/>
+    <label>Last Name: <input type="text" name="lname" /></label><br/>
+    <label>Password: <input type="text" name="password" /></label><br/>
+    <label>Address: <input type="text" name="address" /></label><br/>
+    <label>Phonenumber: <input type="number" name="phoneNumber" /></label><br/>
+<!--    <label>Date Of Birth: <input type="date" id="dob" name="dob" /></label><br/>-->
+    <button type="submit" >Save</button>
+</form>
+
+<a th:href="@{/list_all_users}">Back to User List</a>
+
+
+
+<script>
+
+console.log("usersss")
+    const saveUser=()=>{
+    console.log("you click user")
+    let fname = document.querySelector("#fname).value
+    let fname = document.querySelector("#fname).value
+    let fname = document.querySelector("#fname).value
+    let fname = document.querySelector("#fname).value
+    let dob = document.querySelector("#dob").value
+
+    let data = {
+    fname:fname,
+    lname :fname,
+     password:fname,
+     address:fname,
+     phoneNumber:"0543456423",
+     dob:dob
+
+    }
+    console.log(data)
+
+<!--async function postJSON(data) {-->
+<!--  try {-->
+<!--    const response = await fetch("http://localhost:9999/save", {-->
+<!--      method: "POST", // or 'PUT'-->
+<!--      headers: {-->
+<!--        "Content-Type": "application/json",-->
+<!--      },-->
+<!--      body: JSON.stringify(data),-->
+<!--    });-->
+
+<!--    const result = await response.json();-->
+<!--    console.log("Success:", result);-->
+<!--  } catch (error) {-->
+<!--    console.error("Error:", error);-->
+<!--  }-->
+<!--}-->
+
+<!--postJSON(data);-->
+
+    }
+</script>
+</body>
+</html>
